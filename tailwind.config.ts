@@ -56,6 +56,8 @@ export default {
         'gradient-primary': 'var(--gradient-primary)',
         'gradient-dark': 'var(--gradient-dark)',
         'gradient-subtle': 'var(--gradient-subtle)',
+        'gradient-calculator': 'var(--gradient-calculator)',
+        'gradient-gold': 'var(--gradient-gold)',
       },
       boxShadow: {
         'elegant': 'var(--shadow-elegant)',

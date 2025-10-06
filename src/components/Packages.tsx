@@ -73,7 +73,7 @@ const Packages = () => {
             {packages.map((pkg, index) => (
               <div
                 key={index}
-                className={`bg-card rounded-lg p-10 text-center transition-all duration-700 hover:shadow-card hover:-translate-y-2 ${
+                className={`bg-card rounded-lg p-10 text-center transition-all duration-700 hover:shadow-card hover:-translate-y-2 flex flex-col ${
                   pkg.featured ? 'border-2 border-accent shadow-glow scale-105' : 'border border-border'
                 } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: `${index * 150}ms` }}
@@ -87,7 +87,7 @@ const Packages = () => {
                 </div>
                 <p className="text-muted-foreground text-sm tracking-wider mb-8">Minimum {pkg.minimum}</p>
 
-                <ul className="space-y-4 mb-10 text-left">
+                <ul className="space-y-4 mb-10 text-left flex-grow">
                   {pkg.features.map((feature, i) => (
                     <li
                       key={i}
@@ -101,11 +101,7 @@ const Packages = () => {
 
                 <Button
                   onClick={scrollToCalculator}
-                  className={`w-full py-6 tracking-widest uppercase text-sm transition-all duration-300 ${
-                    pkg.featured
-                      ? 'bg-gradient-primary hover:shadow-glow hover:-translate-y-1 text-primary-foreground'
-                      : 'bg-transparent border-2 border-accent text-accent hover:bg-accent/10'
-                  }`}
+                  className="w-full py-6 tracking-widest uppercase text-sm transition-all duration-300 bg-gradient-gold hover:shadow-glow hover:-translate-y-1 text-black font-semibold mt-auto"
                 >
                   Inquire
                 </Button>
