@@ -70,7 +70,7 @@ const QuoteCalculator = () => {
           </div>
           <p className="text-muted-foreground mb-8">Based on {formData.guestCount} guests with {formData.serviceLevel} service</p>
           
-          <div className="bg-gradient-subtle border-l-4 border-accent p-6 rounded-sm text-left mb-8">
+          <div className="bg-gradient-subtle border-l-4 border-accent p-6 rounded-lg text-left mb-8">
             <h3 className="text-xl font-light mb-4 text-card-foreground">Recommended Package</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-center gap-2">
@@ -106,7 +106,7 @@ const QuoteCalculator = () => {
   return (
     <div ref={ref} className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
       {/* Progress Bar */}
-      <div className="w-full h-1 bg-muted mb-8 rounded-sm overflow-hidden">
+      <div className="w-full h-1 bg-muted mb-8 rounded-full overflow-hidden">
         <div 
           className="h-full bg-gradient-primary transition-all duration-300"
           style={{ width: `${progress}%` }}
@@ -123,7 +123,7 @@ const QuoteCalculator = () => {
               <button
                 key={type}
                 onClick={() => setFormData({ ...formData, eventType: type })}
-                className={`p-6 border-2 rounded-sm transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-card ${
+                className={`p-6 border-2 rounded-lg transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-card ${
                   formData.eventType === type ? 'border-accent bg-gradient-subtle' : 'border-border'
                 }`}
               >
@@ -164,7 +164,7 @@ const QuoteCalculator = () => {
               <button
                 key={level.value}
                 onClick={() => setFormData({ ...formData, serviceLevel: level.value })}
-                className={`p-6 border-2 rounded-sm transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-card ${
+                className={`p-6 border-2 rounded-lg transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-card ${
                   formData.serviceLevel === level.value ? 'border-accent bg-gradient-subtle' : 'border-border'
                 }`}
               >

@@ -28,7 +28,7 @@ const Gallery = () => {
             {galleryItems.map((item, index) => (
               <div
                 key={index}
-                className={`group relative h-80 rounded-sm overflow-hidden cursor-pointer transition-all duration-700 hover:shadow-card hover:-translate-y-2 ${
+                className={`group relative h-80 rounded-lg overflow-hidden cursor-pointer transition-all duration-700 hover:shadow-card hover:-translate-y-2 border-2 border-accent/30 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}

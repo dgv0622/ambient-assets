@@ -32,7 +32,7 @@ const About = () => {
             </div>
 
             <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`} style={{ transitionDelay: '200ms' }}>
-              <div className="relative h-[450px] rounded-sm overflow-hidden shadow-elegant">
+              <div className="relative h-[450px] rounded-lg overflow-hidden shadow-elegant border-2 border-accent/30">
                 <img
                   src="https://i.imgur.com/3NhFg9X.jpeg"
                   alt="Smokehouse Miami Team"

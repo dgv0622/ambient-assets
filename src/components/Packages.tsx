@@ -73,7 +73,7 @@ const Packages = () => {
             {packages.map((pkg, index) => (
               <div
                 key={index}
-                className={`bg-card rounded-sm p-10 text-center transition-all duration-700 hover:shadow-card hover:-translate-y-2 ${
+                className={`bg-card rounded-lg p-10 text-center transition-all duration-700 hover:shadow-card hover:-translate-y-2 ${
                   pkg.featured ? 'border-2 border-accent shadow-glow scale-105' : 'border border-border'
                 } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: `${index * 150}ms` }}
