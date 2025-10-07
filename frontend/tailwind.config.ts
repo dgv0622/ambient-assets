@@ -51,6 +51,21 @@ export default {
           red: "hsl(var(--bbq-red))",
           "red-dark": "hsl(var(--bbq-red-dark))",
         },
+        burnt: {
+          umber: "hsl(var(--burnt-umber))",
+        },
+        cream: {
+          white: "hsl(var(--cream-white))",
+        },
+        dusty: {
+          red: "hsl(var(--dusty-red))",
+        },
+        charcoal: {
+          gray: "hsl(var(--charcoal-gray))",
+        },
+        faded: {
+          mustard: "hsl(var(--faded-mustard))",
+        },
       },
       backgroundImage: {
         'gradient-primary': 'var(--gradient-primary)',
