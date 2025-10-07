@@ -274,22 +274,22 @@ const ChatBot = () => {
           {/* Chat Messages */}
           {!showUserForm && session && (
             <>
-              <ScrollArea className="flex-1 p-4">
+              <ScrollArea className="flex-1 p-6 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
                 <div className="space-y-4">
                   {messages.map((msg, index) => (
                     <div
                       key={msg.id || index}
-                      className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                      className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'} animate-in slide-in-from-bottom-2 duration-300`}
                     >
                       <div
-                        className={`max-w-[80%] rounded-lg px-4 py-2 ${
+                        className={`max-w-[85%] rounded-2xl px-5 py-3 shadow-sm ${
                           msg.sender === 'user'
-                            ? 'bg-bbq-red text-white'
-                            : 'bg-muted text-foreground'
+                            ? 'bg-gradient-to-r from-[#FF2D55] via-[#FF1744] to-[#E91E63] text-white'
+                            : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700'
                         }`}
                       >
-                        <p className="text-sm whitespace-pre-wrap">{msg.message}</p>
-                        <p className="text-xs mt-1 opacity-70">
+                        <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.message}</p>
+                        <p className={`text-xs mt-2 ${msg.sender === 'user' ? 'text-white/80' : 'text-gray-500 dark:text-gray-400'}`}>
                           {new Date(msg.timestamp).toLocaleTimeString([], {
                             hour: '2-digit',
                             minute: '2-digit',
@@ -299,9 +299,12 @@ const ChatBot = () => {
                     </div>
                   ))}
                   {isLoading && (
-                    <div className="flex justify-start">
-                      <div className="bg-muted rounded-lg px-4 py-2">
-                        <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />
+                    <div className="flex justify-start animate-in slide-in-from-bottom-2 duration-300">
+                      <div className="bg-white dark:bg-gray-800 rounded-2xl px-5 py-3 shadow-sm border border-gray-200 dark:border-gray-700">
+                        <div className="flex items-center gap-2">
+                          <Loader2 className="w-4 h-4 animate-spin text-[#FF2D55]" />
+                          <span className="text-sm text-gray-600 dark:text-gray-400">Typing...</span>
+                        </div>
                       </div>
                     </div>
                   )}
@@ -310,31 +313,31 @@ const ChatBot = () => {
               </ScrollArea>
 
               {/* Input Area */}
-              <div className="p-4 border-t border-border">
-                <form onSubmit={handleSendMessage} className="flex gap-2">
+              <div className="p-5 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                <form onSubmit={handleSendMessage} className="flex gap-3">
                   <Input
                     type="text"
                     placeholder="Type your message..."
                     value={inputMessage}
                     onChange={(e) => setInputMessage(e.target.value)}
                     disabled={isLoading}
-                    className="flex-1"
+                    className="flex-1 h-12 rounded-xl border-2 border-gray-200 dark:border-gray-700 focus:border-[#FF2D55] transition-all duration-200 bg-gray-50 dark:bg-gray-800"
                   />
                   <Button
                     type="submit"
                     size="icon"
                     disabled={isLoading || !inputMessage.trim()}
-                    className="bg-bbq-red hover:bg-bbq-red/90"
+                    className="h-12 w-12 bg-gradient-to-r from-[#FF2D55] via-[#FF1744] to-[#E91E63] hover:shadow-lg hover:shadow-[#FF2D55]/50 transition-all duration-300 rounded-xl"
                   >
-                    <Send className="w-4 h-4" />
+                    <Send className="w-5 h-5" strokeWidth={2.5} />
                   </Button>
                 </form>
-                <div className="mt-2 flex justify-center">
+                <div className="mt-3 flex justify-center">
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={handleNewChat}
-                    className="text-xs text-muted-foreground"
+                    className="text-xs text-gray-500 dark:text-gray-400 hover:text-[#FF2D55] transition-colors duration-200 rounded-lg"
                   >
                     Start New Chat
                   </Button>
