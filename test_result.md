@@ -101,3 +101,112 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Build a chatbot component to the BBQ catering website that can be connected to an n8n workflow to have its answers tailored there. The chatbot should collect user name and email, help with questions about prices, menu items, sales, orders and bookings. It should have a floating button with eye-catching effects and send each message through n8n before displaying a response."
+
+backend:
+  - task: "Create chat session endpoint"
+    implemented: true
+    working: "NA"
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Created POST /api/chat/session endpoint to create new chat sessions with user name and email. Returns session ID for tracking conversations."
+  
+  - task: "Create chat message endpoint"
+    implemented: true
+    working: "NA"
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Created POST /api/chat/message endpoint that sends user messages to n8n webhook and returns bot responses. Handles n8n integration with error handling and fallback messages."
+  
+  - task: "Create chat history endpoint"
+    implemented: true
+    working: "NA"
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Created GET /api/chat/messages/{session_id} endpoint to retrieve all messages for a specific chat session."
+  
+  - task: "Create n8n config endpoints"
+    implemented: true
+    working: "NA"
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Created GET and PUT /api/chat/config endpoints to manage n8n webhook URL configuration. Allows admin to set/update webhook URL."
+
+frontend:
+  - task: "Create ChatBot component"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/components/ChatBot.tsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Created ChatBot component with floating button featuring pulse/glow animation effects. Includes user info form (name + email), chat interface, message history, and integration with backend APIs. Stores session in localStorage."
+  
+  - task: "Add ChatBot to main page"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Index.tsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Added ChatBot component to the Index page. It appears as a floating button in the bottom-right corner."
+  
+  - task: "Create ChatConfig admin page"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/ChatConfig.tsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Created /chat-config admin page to configure n8n webhook URL. Includes setup instructions and testing guidance. Accessible at /chat-config route."
+
+metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 0
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "Create chat session endpoint"
+    - "Create chat message endpoint"
+    - "Create n8n config endpoints"
+    - "Create ChatBot component"
+    - "Create ChatConfig admin page"
+  stuck_tasks: []
+  test_all: true
+  test_priority: "high_first"
+
+agent_communication:
+  - agent: "main"
+    message: "Implemented complete chatbot functionality with n8n integration. Backend endpoints created for session management, message handling, and n8n webhook configuration. Frontend ChatBot component created with animated floating button, user info collection, and chat interface. Admin config page created at /chat-config for setting n8n webhook URL. Ready for backend testing."
