@@ -274,7 +274,7 @@ const ChatBot = () => {
           {/* Chat Messages */}
           {!showUserForm && session && (
             <>
-              <ScrollArea className="flex-1 p-6 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+              <ScrollArea className="flex-1 p-6 bg-gradient-to-br from-cream-white to-faded-mustard/10">
                 <div className="space-y-4">
                   {messages.map((msg, index) => (
                     <div
@@ -282,14 +282,14 @@ const ChatBot = () => {
                       className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'} animate-in slide-in-from-bottom-2 duration-300`}
                     >
                       <div
-                        className={`max-w-[85%] rounded-2xl px-5 py-3 shadow-sm ${
+                        className={`max-w-[85%] rounded px-4 py-3 shadow-soft ${
                           msg.sender === 'user'
-                            ? 'bg-gradient-to-r from-[#FF2D55] via-[#FF1744] to-[#E91E63] text-white'
-                            : 'bg-white dark:bg-gray-800 text-black dark:text-gray-100 border border-gray-200 dark:border-gray-700'
+                            ? 'bg-gradient-to-r from-burnt-umber to-dusty-red text-cream-white'
+                            : 'bg-white text-charcoal-gray border border-burnt-umber/10'
                         }`}
                       >
-                        <p className="text-sm leading-relaxed whitespace-pre-wrap font-medium">{msg.message}</p>
-                        <p className={`text-xs mt-2 ${msg.sender === 'user' ? 'text-white/80' : 'text-gray-600 dark:text-gray-400'}`}>
+                        <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.message}</p>
+                        <p className={`text-xs mt-2 ${msg.sender === 'user' ? 'text-cream-white/70' : 'text-charcoal-gray/60'}`}>
                           {new Date(msg.timestamp).toLocaleTimeString([], {
                             hour: '2-digit',
                             minute: '2-digit',
@@ -300,10 +300,10 @@ const ChatBot = () => {
                   ))}
                   {isLoading && (
                     <div className="flex justify-start animate-in slide-in-from-bottom-2 duration-300">
-                      <div className="bg-white dark:bg-gray-800 rounded-2xl px-5 py-3 shadow-sm border border-gray-200 dark:border-gray-700">
+                      <div className="bg-white rounded px-4 py-3 shadow-soft border border-burnt-umber/10">
                         <div className="flex items-center gap-2">
-                          <Loader2 className="w-4 h-4 animate-spin text-[#FF2D55]" />
-                          <span className="text-sm text-black dark:text-gray-400 font-medium">Typing...</span>
+                          <Loader2 className="w-4 h-4 animate-spin text-burnt-umber" />
+                          <span className="text-sm text-charcoal-gray">Typing...</span>
                         </div>
                       </div>
                     </div>
