@@ -36,6 +36,34 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+# Chatbot Models
+class ChatSession(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    user_name: str
+    user_email: EmailStr
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+
+class ChatSessionCreate(BaseModel):
+    user_name: str
+    user_email: EmailStr
+
+class ChatMessage(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    session_id: str
+    message: str
+    sender: str  # "user" or "bot"
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+
+class ChatMessageSend(BaseModel):
+    session_id: str
+    message: str
+
+class N8nConfig(BaseModel):
+    webhook_url: Optional[str] = None
+
+class N8nConfigUpdate(BaseModel):
+    webhook_url: str
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
