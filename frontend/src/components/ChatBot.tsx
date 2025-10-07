@@ -285,11 +285,11 @@ const ChatBot = () => {
                         className={`max-w-[85%] rounded-2xl px-5 py-3 shadow-sm ${
                           msg.sender === 'user'
                             ? 'bg-gradient-to-r from-[#FF2D55] via-[#FF1744] to-[#E91E63] text-white'
-                            : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700'
+                            : 'bg-white dark:bg-gray-800 text-black dark:text-gray-100 border border-gray-200 dark:border-gray-700'
                         }`}
                       >
-                        <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.message}</p>
-                        <p className={`text-xs mt-2 ${msg.sender === 'user' ? 'text-white/80' : 'text-gray-500 dark:text-gray-400'}`}>
+                        <p className="text-sm leading-relaxed whitespace-pre-wrap font-medium">{msg.message}</p>
+                        <p className={`text-xs mt-2 ${msg.sender === 'user' ? 'text-white/80' : 'text-gray-600 dark:text-gray-400'}`}>
                           {new Date(msg.timestamp).toLocaleTimeString([], {
                             hour: '2-digit',
                             minute: '2-digit',
@@ -303,7 +303,7 @@ const ChatBot = () => {
                       <div className="bg-white dark:bg-gray-800 rounded-2xl px-5 py-3 shadow-sm border border-gray-200 dark:border-gray-700">
                         <div className="flex items-center gap-2">
                           <Loader2 className="w-4 h-4 animate-spin text-[#FF2D55]" />
-                          <span className="text-sm text-gray-600 dark:text-gray-400">Typing...</span>
+                          <span className="text-sm text-black dark:text-gray-400 font-medium">Typing...</span>
                         </div>
                       </div>
                     </div>
