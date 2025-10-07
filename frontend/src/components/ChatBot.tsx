@@ -321,7 +321,7 @@ const ChatBot = () => {
                     value={inputMessage}
                     onChange={(e) => setInputMessage(e.target.value)}
                     disabled={isLoading}
-                    className="flex-1 h-12 rounded-xl border-2 border-gray-200 dark:border-gray-700 focus:border-[#FF2D55] transition-all duration-200 bg-gray-50 dark:bg-gray-800"
+                    className="flex-1 h-12 rounded-xl border-2 border-gray-200 dark:border-gray-700 focus:border-[#FF2D55] transition-all duration-200 bg-gray-50 dark:bg-gray-800 text-black dark:text-white placeholder:text-gray-500"
                   />
                   <Button
                     type="submit"
@@ -337,7 +337,7 @@ const ChatBot = () => {
                     variant="ghost"
                     size="sm"
                     onClick={handleNewChat}
-                    className="text-xs text-gray-500 dark:text-gray-400 hover:text-[#FF2D55] transition-colors duration-200 rounded-lg"
+                    className="text-xs text-black dark:text-gray-400 hover:text-[#FF2D55] transition-colors duration-200 rounded-lg font-medium"
                   >
                     Start New Chat
                   </Button>
