@@ -16,33 +16,33 @@ const Index = () => {
       <Navigation />
 
       {/* Quote Calculator Section */}
-      <section className="min-h-screen flex items-center justify-center py-32 px-6 bg-gradient-dark relative" id="calculator">
-        {/* Background effects */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-bbq-red/10 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-accent/5 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2" />
+      <section className="min-h-screen flex items-center justify-center py-32 px-6 bg-gradient-to-br from-burnt-umber/20 via-cream-white to-faded-mustard/10 relative" id="calculator">
+        {/* Subtle smoke effect */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-burnt-umber/30 rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-faded-mustard/20 rounded-full blur-[120px]" />
         </div>
 
         <div className="w-full max-w-3xl relative z-10">
           <div
             ref={ref}
-            className={`rounded-sm shadow-elegant overflow-hidden transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+            className={`rounded shadow-card overflow-hidden transition-all duration-700 ease-out ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            {/* Calculator Header */}
-            <div className="bg-gradient-to-br from-[#D4AF37] via-[#F4E4A6] to-[#D4AF37] text-gray-900 p-12 text-center relative shadow-lg">
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
-              <h1 className="text-4xl md:text-5xl font-extralight tracking-[0.2em] uppercase mb-4 text-gray-900">
+            {/* Calculator Header - Heritage Gold */}
+            <div className="bg-gradient-to-br from-faded-mustard via-[#D4AF37] to-faded-mustard text-charcoal-gray p-12 text-center relative">
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-burnt-umber/40" />
+              <h1 className="text-4xl md:text-5xl tracking-[0.15em] uppercase mb-4 font-serif">
                 Get Your Quote
               </h1>
-              <p className="text-lg text-gray-800 font-light tracking-wide">
+              <p className="text-base text-charcoal-gray/80 tracking-wide font-light">
                 Answer a few quick questions for an instant estimate
               </p>
             </div>
 
-            {/* Calculator Body - Transparent fade effect */}
-            <div className="p-12 bg-gradient-to-b from-white/95 via-white/80 to-white/60 backdrop-blur-sm">
+            {/* Calculator Body - Transparent fade into background */}
+            <div className="p-12 bg-gradient-to-b from-cream-white/95 via-cream-white/75 to-cream-white/50 backdrop-blur-[2px]">
               <QuoteCalculator />
             </div>
           </div>
