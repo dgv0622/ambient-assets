@@ -186,29 +186,29 @@ const ChatBot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-8 right-8 z-50 w-[420px] h-[650px] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200/20 backdrop-blur-xl">
+        <div className="fixed bottom-8 right-8 z-50 w-[420px] h-[650px] bg-cream-white rounded shadow-card flex flex-col overflow-hidden border border-burnt-umber/10">
           {/* Header */}
-          <div className="bg-gradient-to-r from-[#FF2D55] via-[#FF1744] to-[#E91E63] text-white p-6 flex items-center justify-between relative overflow-hidden">
-            {/* Animated background pattern */}
+          <div className="bg-gradient-to-r from-burnt-umber via-dusty-red to-burnt-umber text-cream-white p-6 flex items-center justify-between relative overflow-hidden">
+            {/* Subtle texture */}
             <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-              <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-1/2 translate-y-1/2"></div>
+              <div className="absolute top-0 left-0 w-32 h-32 bg-faded-mustard rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+              <div className="absolute bottom-0 right-0 w-24 h-24 bg-faded-mustard rounded-full translate-x-1/2 translate-y-1/2"></div>
             </div>
             
             <div className="flex items-center gap-4 relative z-10">
-              <div className="bg-white/20 backdrop-blur-sm p-2.5 rounded-xl">
+              <div className="bg-faded-mustard/30 backdrop-blur-sm p-2.5 rounded">
                 <MessageCircle className="w-6 h-6" strokeWidth={2.5} />
               </div>
               <div>
-                <h3 className="font-bold text-lg tracking-tight">BBQ Catering Chat</h3>
-                <p className="text-xs text-white/90 font-medium">Always here to help! 🔥</p>
+                <h3 className="font-serif font-bold text-lg tracking-wide">BBQ Catering Chat</h3>
+                <p className="text-xs text-cream-white/90 font-light">Real help, real quick 🍖</p>
               </div>
             </div>
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleChat}
-              className="text-white hover:bg-white/20 rounded-xl relative z-10 transition-all duration-200"
+              className="text-cream-white hover:bg-faded-mustard/20 rounded relative z-10 transition-all duration-200"
             >
               <X className="w-5 h-5" strokeWidth={2.5} />
             </Button>
