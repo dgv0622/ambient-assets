@@ -6,6 +6,7 @@ import Gallery from '@/components/Gallery';
 import Packages from '@/components/Packages';
 import About from '@/components/About';
 import Footer from '@/components/Footer';
+import ChatBot from '@/components/ChatBot';
 
 const Index = () => {
   const { ref, isVisible } = useScrollAnimation();
