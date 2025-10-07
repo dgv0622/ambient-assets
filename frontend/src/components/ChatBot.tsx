@@ -165,20 +165,21 @@ const ChatBot = () => {
         >
           <div className="relative">
             {/* Pulsing background effect */}
-            <div className="absolute inset-0 bg-bbq-red rounded-full animate-ping opacity-75"></div>
+            <div className="absolute inset-0 bg-[#FF2D55] rounded-full animate-ping opacity-75"></div>
             
             {/* Main button */}
-            <div className="relative bg-gradient-to-br from-bbq-red to-bbq-red/80 text-white rounded-full p-4 shadow-2xl hover:shadow-bbq-red/50 transition-all duration-300 hover:scale-110">
-              <MessageCircle className="w-7 h-7" />
+            <div className="relative bg-gradient-to-br from-[#FF2D55] via-[#FF1744] to-[#E91E63] text-white rounded-full p-5 shadow-2xl hover:shadow-[#FF2D55]/60 transition-all duration-300 hover:scale-110 border-2 border-white/20">
+              <MessageCircle className="w-8 h-8" strokeWidth={2.5} />
             </div>
             
             {/* Glow effect */}
-            <div className="absolute inset-0 rounded-full bg-bbq-red/30 blur-xl group-hover:bg-bbq-red/50 transition-all duration-300"></div>
+            <div className="absolute inset-0 rounded-full bg-[#FF2D55]/40 blur-2xl group-hover:bg-[#FF2D55]/60 transition-all duration-300"></div>
           </div>
           
           {/* Tooltip */}
-          <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-card text-foreground text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-            Chat with us!
+          <div className="absolute bottom-full right-0 mb-3 px-4 py-2 bg-gradient-to-r from-gray-900 to-gray-800 text-white text-sm rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap border border-white/10">
+            <span className="font-medium">Chat with us!</span>
+            <div className="absolute top-full right-6 -mt-1 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-900"></div>
           </div>
         </button>
       )}
