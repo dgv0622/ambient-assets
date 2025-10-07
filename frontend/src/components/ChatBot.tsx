@@ -216,16 +216,21 @@ const ChatBot = () => {
 
           {/* User Info Form */}
           {showUserForm && (
-            <div className="flex-1 p-6 flex flex-col justify-center">
-              <div className="text-center mb-6">
-                <h4 className="text-xl font-semibold mb-2">Welcome!</h4>
-                <p className="text-sm text-muted-foreground">
-                  Please introduce yourself to start chatting
+            <div className="flex-1 p-8 flex flex-col justify-center bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#FF2D55] to-[#E91E63] rounded-2xl mb-4 shadow-lg">
+                  <MessageCircle className="w-8 h-8 text-white" strokeWidth={2.5} />
+                </div>
+                <h4 className="text-2xl font-bold mb-2 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+                  Welcome!
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Let's get started with your BBQ catering journey
                 </p>
               </div>
-              <form onSubmit={handleCreateSession} className="space-y-4">
+              <form onSubmit={handleCreateSession} className="space-y-5">
                 <div>
-                  <Label htmlFor="name">Your Name</Label>
+                  <Label htmlFor="name" className="text-sm font-semibold text-gray-700 dark:text-gray-300">Your Name</Label>
                   <Input
                     id="name"
                     type="text"
@@ -233,11 +238,11 @@ const ChatBot = () => {
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
                     required
-                    className="mt-1"
+                    className="mt-2 h-12 rounded-xl border-2 border-gray-200 dark:border-gray-700 focus:border-[#FF2D55] transition-all duration-200 bg-white dark:bg-gray-800"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email">Your Email</Label>
+                  <Label htmlFor="email" className="text-sm font-semibold text-gray-700 dark:text-gray-300">Your Email</Label>
                   <Input
                     id="email"
                     type="email"
@@ -245,17 +250,17 @@ const ChatBot = () => {
                     value={userEmail}
                     onChange={(e) => setUserEmail(e.target.value)}
                     required
-                    className="mt-1"
+                    className="mt-2 h-12 rounded-xl border-2 border-gray-200 dark:border-gray-700 focus:border-[#FF2D55] transition-all duration-200 bg-white dark:bg-gray-800"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-bbq-red hover:bg-bbq-red/90"
+                  className="w-full h-12 bg-gradient-to-r from-[#FF2D55] via-[#FF1744] to-[#E91E63] hover:shadow-lg hover:shadow-[#FF2D55]/50 transition-all duration-300 rounded-xl font-semibold text-base"
                   disabled={isLoading}
                 >
                   {isLoading ? (
                     <>
-                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
                       Starting Chat...
                     </>
                   ) : (
