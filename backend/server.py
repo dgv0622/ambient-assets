@@ -174,7 +174,7 @@ async def update_n8n_config(config_data: N8nConfigUpdate):
     # Delete existing config and insert new one
     await db.n8n_config.delete_many({})
     await db.n8n_config.insert_one({"webhook_url": config_data.webhook_url})
-    logger.info(f"Updated n8n webhook URL")
+    logger.info("Updated n8n webhook URL")
     return {"message": "Configuration updated successfully", "webhook_url": config_data.webhook_url}
 
 # Include the router in the main app
