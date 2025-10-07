@@ -63,6 +63,9 @@ const Index = () => {
 
       {/* Footer */}
       <Footer />
+
+      {/* ChatBot */}
+      <ChatBot />
     </div>
   );
 };
