@@ -26,23 +26,23 @@ const Index = () => {
         <div className="w-full max-w-3xl relative z-10">
           <div
             ref={ref}
-            className={`bg-card rounded-sm shadow-elegant overflow-hidden transition-all duration-1000 ${
+            className={`rounded-sm shadow-elegant overflow-hidden transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
           >
             {/* Calculator Header */}
-            <div className="bg-gradient-dark text-foreground p-12 text-center relative">
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-primary" />
-              <h1 className="text-4xl md:text-5xl font-extralight tracking-[0.2em] uppercase mb-4">
+            <div className="bg-gradient-to-br from-[#D4AF37] via-[#F4E4A6] to-[#D4AF37] text-gray-900 p-12 text-center relative shadow-lg">
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
+              <h1 className="text-4xl md:text-5xl font-extralight tracking-[0.2em] uppercase mb-4 text-gray-900">
                 Get Your Quote
               </h1>
-              <p className="text-lg text-muted-foreground font-light tracking-wide">
+              <p className="text-lg text-gray-800 font-light tracking-wide">
                 Answer a few quick questions for an instant estimate
               </p>
             </div>
 
-            {/* Calculator Body */}
-            <div className="p-12">
+            {/* Calculator Body - Transparent fade effect */}
+            <div className="p-12 bg-gradient-to-b from-white/95 via-white/80 to-white/60 backdrop-blur-sm">
               <QuoteCalculator />
             </div>
           </div>
