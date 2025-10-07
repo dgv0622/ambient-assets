@@ -165,17 +165,17 @@ const ChatConfig = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-bbq-red hover:bg-bbq-red/90"
+                  className="w-full h-12 bg-gradient-to-r from-[#FF2D55] via-[#FF1744] to-[#E91E63] hover:shadow-lg hover:shadow-[#FF2D55]/50 transition-all duration-300 rounded-xl font-semibold"
                   disabled={isSaving || !webhookUrl.trim()}
                 >
                   {isSaving ? (
                     <>
-                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
                       Saving...
                     </>
                   ) : (
                     <>
-                      <Save className="w-4 h-4 mr-2" />
+                      <Save className="w-5 h-5 mr-2" />
                       Save Configuration
                     </>
                   )}
