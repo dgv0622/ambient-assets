@@ -30,29 +30,8 @@ const Index = () => {
     <div className="min-h-screen bg-cream-white relative">
       <Navigation />
 
-      {/* Hero Section - Film Grain & Smoke */}
-      <Hero />
-
-      {/* Our Story Section */}
-      <OurStory />
-
-      {/* Smoke Line Divider */}
-      <SmokeDivider />
-
-      {/* Menu Carousel */}
-      <MenuCarousel />
-
-      {/* Smoke Line Divider */}
-      <SmokeDivider />
-
-      {/* Our Values Section */}
-      <OurValues />
-
-      {/* Testimonials - Stories from the Table */}
-      <Testimonials />
-
-      {/* Quote Calculator Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-burnt-umber/10 via-cream-white to-faded-mustard/5 relative" id="calculator">
+      {/* 1. Quote Calculator Section - FIRST */}
+      <section className="min-h-screen flex items-center justify-center py-32 px-6 bg-gradient-to-br from-burnt-umber/10 via-cream-white to-faded-mustard/5 relative" id="calculator">
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-burnt-umber/30 rounded-full blur-[120px]" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-faded-mustard/20 rounded-full blur-[120px]" />
@@ -67,10 +46,10 @@ const Index = () => {
           >
             <div className="bg-gradient-to-br from-faded-mustard via-[#D4AF37] to-faded-mustard text-charcoal-gray p-12 text-center relative">
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-burnt-umber/40" />
-              <h2 className="text-3xl md:text-4xl tracking-[0.15em] uppercase mb-3 font-serif">
+              <h1 className="text-4xl md:text-5xl tracking-[0.15em] uppercase mb-4 font-serif">
                 Plan Your Feast
-              </h2>
-              <p className="text-sm text-charcoal-gray/70 tracking-wide font-light">
+              </h1>
+              <p className="text-base text-charcoal-gray/70 tracking-wide font-light">
                 Tell us about your gathering — we'll bring the fire
               </p>
             </div>
@@ -81,6 +60,33 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Smoke Line Divider */}
+      <SmokeDivider />
+
+      {/* 2. Testimonials - Stories from the Table - SECOND */}
+      <Testimonials />
+
+      {/* Smoke Line Divider */}
+      <SmokeDivider />
+
+      {/* 3. Menu Carousel - THIRD */}
+      <MenuCarousel />
+
+      {/* Smoke Line Divider */}
+      <SmokeDivider />
+
+      {/* 4. Our Values Section - FOURTH */}
+      <OurValues />
+
+      {/* Smoke Line Divider */}
+      <SmokeDivider />
+
+      {/* 5. Our Story Section - LAST */}
+      <OurStory />
+
+      {/* Hero Section - Moved to bottom as visual closer */}
+      <Hero />
 
       {/* Footer */}
       <Footer />
