@@ -216,21 +216,21 @@ const ChatBot = () => {
 
           {/* User Info Form */}
           {showUserForm && (
-            <div className="flex-1 p-8 flex flex-col justify-center bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+            <div className="flex-1 p-8 flex flex-col justify-center bg-gradient-to-br from-cream-white to-faded-mustard/10">
               <div className="text-center mb-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#FF2D55] to-[#E91E63] rounded-2xl mb-4 shadow-lg">
-                  <MessageCircle className="w-8 h-8 text-white" strokeWidth={2.5} />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-burnt-umber to-dusty-red rounded mb-4 shadow-soft">
+                  <MessageCircle className="w-8 h-8 text-cream-white" strokeWidth={2.5} />
                 </div>
-                <h4 className="text-2xl font-bold mb-2 text-black dark:text-white">
+                <h4 className="text-2xl font-serif mb-2 text-charcoal-gray">
                   Welcome!
                 </h4>
-                <p className="text-sm text-black dark:text-gray-400 font-medium">
+                <p className="text-sm text-charcoal-gray/70 font-light">
                   Let's get started with your BBQ catering journey
                 </p>
               </div>
               <form onSubmit={handleCreateSession} className="space-y-5">
                 <div>
-                  <Label htmlFor="name" className="text-sm font-semibold text-black dark:text-gray-300">Your Name</Label>
+                  <Label htmlFor="name" className="text-sm font-medium text-charcoal-gray">Your Name</Label>
                   <Input
                     id="name"
                     type="text"
@@ -238,11 +238,11 @@ const ChatBot = () => {
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
                     required
-                    className="mt-2 h-12 rounded-xl border-2 border-gray-200 dark:border-gray-700 focus:border-[#FF2D55] transition-all duration-200 bg-white dark:bg-gray-800 text-black dark:text-white"
+                    className="mt-2 h-11 rounded border border-burnt-umber/20 focus:border-burnt-umber transition-all duration-200 bg-white text-charcoal-gray"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email" className="text-sm font-semibold text-black dark:text-gray-300">Your Email</Label>
+                  <Label htmlFor="email" className="text-sm font-medium text-charcoal-gray">Your Email</Label>
                   <Input
                     id="email"
                     type="email"
@@ -250,12 +250,12 @@ const ChatBot = () => {
                     value={userEmail}
                     onChange={(e) => setUserEmail(e.target.value)}
                     required
-                    className="mt-2 h-12 rounded-xl border-2 border-gray-200 dark:border-gray-700 focus:border-[#FF2D55] transition-all duration-200 bg-white dark:bg-gray-800 text-black dark:text-white"
+                    className="mt-2 h-11 rounded border border-burnt-umber/20 focus:border-burnt-umber transition-all duration-200 bg-white text-charcoal-gray"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full h-12 bg-gradient-to-r from-[#FF2D55] via-[#FF1744] to-[#E91E63] hover:shadow-lg hover:shadow-[#FF2D55]/50 transition-all duration-300 rounded-xl font-semibold text-base"
+                  className="w-full h-11 bg-gradient-to-r from-burnt-umber via-dusty-red to-burnt-umber hover:shadow-lg hover:shadow-burnt-umber/30 transition-all duration-250 rounded font-medium text-cream-white"
                   disabled={isLoading}
                 >
                   {isLoading ? (
