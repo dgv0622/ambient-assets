@@ -4,7 +4,7 @@ const OurStory = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="py-24 md:py-32 px-6 bg-cream-white relative overflow-hidden">
+    <section className="py-24 md:py-32 px-6 bg-cream-white relative overflow-hidden" id="about">
       {/* Linen texture background */}
       <div 
         className="absolute inset-0 opacity-[0.03]"
