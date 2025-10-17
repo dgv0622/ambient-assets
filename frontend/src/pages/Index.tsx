@@ -32,12 +32,12 @@ const Index = () => {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <div className="bg-gradient-to-br from-faded-mustard via-[#D4AF37] to-faded-mustard text-charcoal-gray p-12 text-center relative">
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-burnt-umber/40" />
+            <div className="bg-gradient-to-br from-blue-700 via-blue-600 to-blue-700 text-cream-white p-12 text-center relative">
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-cream-white/40" />
               <h1 className="text-4xl md:text-5xl tracking-[0.15em] uppercase mb-4 font-serif">
                 Plan Your Feast
               </h1>
-              <p className="text-base text-charcoal-gray/70 tracking-wide font-light">
+              <p className="text-base text-cream-white/90 tracking-wide font-light">
                 Tell us about your gathering — we'll bring the fire
               </p>
             </div>
