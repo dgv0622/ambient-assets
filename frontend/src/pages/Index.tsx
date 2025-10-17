@@ -10,21 +10,9 @@ import Testimonials from '@/components/Testimonials';
 import QuoteCalculator from '@/components/QuoteCalculator';
 import Footer from '@/components/Footer';
 import ChatBot from '@/components/ChatBot';
-import StickyCTA from '@/components/StickyCTA';
 
 const Index = () => {
   const { ref, isVisible } = useScrollAnimation();
-  const [showStickyCTA, setShowStickyCTA] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      setShowStickyCTA(scrollPercentage > 30);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <div className="min-h-screen bg-cream-white relative">
