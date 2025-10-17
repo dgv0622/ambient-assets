@@ -86,7 +86,7 @@ const Navigation = () => {
                 <li key={item}>
                   <button
                     onClick={() => handleNavigation(item)}
-                    className="text-foreground hover:text-accent transition-colors duration-300 font-light tracking-wider text-sm uppercase w-full text-left"
+                    className="text-faded-mustard hover:text-faded-mustard/80 transition-colors duration-300 font-light tracking-wider text-sm uppercase w-full text-left"
                   >
                     {item === 'calculator' ? 'Get Quote' : item}
                   </button>
