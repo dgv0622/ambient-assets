@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -35,6 +35,15 @@ const MenuCarousel = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [activeIndex, setActiveIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  // Auto-rotate menu items at the same speed as testimonials (4 seconds)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % menuItems.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const next = () => setActiveIndex((prev) => (prev + 1) % menuItems.length);
   const prev = () => setActiveIndex((prev) => (prev - 1 + menuItems.length) % menuItems.length);
