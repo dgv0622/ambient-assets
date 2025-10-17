@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -135,4 +135,4 @@ const MenuCarousel = () => {
   );
 };
 
-export default MenuCarousel;
+export default memo(MenuCarousel);

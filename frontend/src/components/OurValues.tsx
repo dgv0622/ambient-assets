@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const values = [
@@ -106,4 +107,4 @@ const OurValues = () => {
   );
 };
 
-export default OurValues;
+export default memo(OurValues);

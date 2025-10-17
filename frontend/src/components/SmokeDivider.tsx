@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const SmokeDivider = () => {
@@ -32,4 +33,4 @@ const SmokeDivider = () => {
   );
 };
 
-export default SmokeDivider;
+export default memo(SmokeDivider);
