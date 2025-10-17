@@ -32,7 +32,7 @@ const Index = () => {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <div className="bg-gradient-to-br from-blue-700 via-blue-600 to-blue-700 text-faded-mustard p-12 text-center relative">
+            <div className="bg-gradient-to-br from-amber-700 via-amber-600 to-yellow-700 text-faded-mustard p-12 text-center relative">
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-faded-mustard/40" />
               <h1 className="text-4xl md:text-5xl tracking-[0.15em] uppercase mb-4 font-serif">
                 Plan Your Feast
