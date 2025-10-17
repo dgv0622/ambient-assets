@@ -87,7 +87,7 @@ const Navigation = () => {
               {['calculator', 'gallery', 'packages', 'about'].map((item) => (
                 <li key={item}>
                   <button
-                    onClick={() => scrollToSection(item)}
+                    onClick={() => handleNavigation(item)}
                     className="text-foreground hover:text-accent transition-colors duration-300 font-light tracking-wider text-sm uppercase w-full text-left"
                   >
                     {item === 'calculator' ? 'Get Quote' : item}
