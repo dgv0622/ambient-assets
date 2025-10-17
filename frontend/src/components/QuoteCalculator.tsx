@@ -205,21 +205,21 @@ const QuoteCalculator = () => {
                 placeholder="Your name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="text-lg p-6 border-2 focus:border-accent bg-black/20 text-foreground placeholder:text-foreground/40"
+                className="text-lg p-6 border-2 focus:border-faded-mustard bg-gradient-to-br from-amber-700/10 to-amber-600/10 text-foreground placeholder:text-foreground/40"
               />
               <Input
                 type="email"
                 placeholder="Your email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="text-lg p-6 border-2 focus:border-accent bg-black/20 text-foreground placeholder:text-foreground/40"
+                className="text-lg p-6 border-2 focus:border-faded-mustard bg-gradient-to-br from-amber-700/10 to-amber-600/10 text-foreground placeholder:text-foreground/40"
               />
               <Input
                 type="tel"
                 placeholder="Your phone number"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="text-lg p-6 border-2 focus:border-accent bg-black/20 text-foreground placeholder:text-foreground/40"
+                className="text-lg p-6 border-2 focus:border-faded-mustard bg-gradient-to-br from-amber-700/10 to-amber-600/10 text-foreground placeholder:text-foreground/40"
               />
             </div>
           </div>
