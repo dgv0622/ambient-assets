@@ -188,7 +188,7 @@ const QuoteCalculator = () => {
               placeholder="Dietary restrictions, preferred meats, special requests..."
               value={formData.menuNotes}
               onChange={(e) => setFormData({ ...formData, menuNotes: e.target.value })}
-              className="min-h-32 text-lg p-4 border-2 focus:border-accent bg-black/20 text-foreground placeholder:text-foreground/40"
+              className="min-h-32 text-lg p-4 border-2 focus:border-faded-mustard bg-gradient-to-br from-amber-700/10 to-amber-600/10 text-foreground placeholder:text-foreground/40"
               rows={4}
             />
           </div>
