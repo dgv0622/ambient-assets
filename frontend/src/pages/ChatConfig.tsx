@@ -126,7 +126,7 @@ const ChatConfig = () => {
                 {currentWebhookUrl && (
                   <div className="bg-muted p-4 rounded-lg">
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-dusty-red mt-0.5" />
                       <div className="flex-1">
                         <p className="font-medium">Currently Configured</p>
                         <p className="text-sm text-muted-foreground break-all mt-1">
