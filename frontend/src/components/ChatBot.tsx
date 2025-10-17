@@ -160,7 +160,7 @@ const ChatBot = () => {
       {!isOpen && (
         <button
           onClick={toggleChat}
-          className="fixed bottom-8 right-8 z-50 group"
+          className="fixed bottom-20 right-8 z-50 group"
           aria-label="Open chat"
         >
           <div className="relative">
