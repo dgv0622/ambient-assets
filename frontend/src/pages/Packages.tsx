@@ -116,15 +116,6 @@ const Packages = () => {
                   'from-faded-mustard/50 via-faded-mustard/70 to-faded-mustard/50'
                 }`}
               />
-              
-              {/* Featured Badge */}
-              {pkg.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
-                  <div className="bg-gradient-to-r from-dusty-red via-burnt-umber to-dusty-red text-cream-white px-6 py-2 rounded-full text-xs uppercase tracking-wider font-semibold shadow-lg">
-                    Most Popular
-                  </div>
-                </div>
-              )}
 
               {/* Card */}
               <div 
