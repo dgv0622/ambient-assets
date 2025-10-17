@@ -274,7 +274,7 @@ const ChatBot = () => {
           {/* Chat Messages */}
           {!showUserForm && session && (
             <>
-              <ScrollArea className="flex-1 p-6 bg-gradient-to-br from-cream-white to-blue-50">
+              <ScrollArea className="flex-1 p-6 bg-gradient-to-br from-cream-white to-amber-50">
                 <div className="space-y-4">
                   {messages.map((msg, index) => (
                     <div
@@ -284,8 +284,8 @@ const ChatBot = () => {
                       <div
                         className={`max-w-[85%] rounded px-4 py-3 shadow-soft ${
                           msg.sender === 'user'
-                            ? 'bg-gradient-to-r from-blue-700 to-blue-600 text-faded-mustard border border-faded-mustard/30'
-                            : 'bg-white text-charcoal-gray border border-blue-600/20'
+                            ? 'bg-gradient-to-r from-amber-700 to-amber-600 text-faded-mustard border border-faded-mustard/30'
+                            : 'bg-white text-charcoal-gray border border-amber-600/20'
                         }`}
                       >
                         <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.message}</p>
@@ -300,9 +300,9 @@ const ChatBot = () => {
                   ))}
                   {isLoading && (
                     <div className="flex justify-start animate-in slide-in-from-bottom-2 duration-300">
-                      <div className="bg-white rounded px-4 py-3 shadow-soft border border-blue-600/20">
+                      <div className="bg-white rounded px-4 py-3 shadow-soft border border-amber-600/20">
                         <div className="flex items-center gap-2">
-                          <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
+                          <Loader2 className="w-4 h-4 animate-spin text-amber-600" />
                           <span className="text-sm text-charcoal-gray">Typing...</span>
                         </div>
                       </div>
@@ -313,7 +313,7 @@ const ChatBot = () => {
               </ScrollArea>
 
               {/* Input Area */}
-              <div className="p-5 border-t border-blue-600/20 bg-cream-white">
+              <div className="p-5 border-t border-amber-600/20 bg-cream-white">
                 <form onSubmit={handleSendMessage} className="flex gap-3">
                   <Input
                     type="text"
@@ -321,13 +321,13 @@ const ChatBot = () => {
                     value={inputMessage}
                     onChange={(e) => setInputMessage(e.target.value)}
                     disabled={isLoading}
-                    className="flex-1 h-11 rounded border border-blue-600/20 focus:border-blue-600 focus:ring-2 focus:ring-faded-mustard/20 transition-all duration-200 bg-white text-charcoal-gray placeholder:text-charcoal-gray/40"
+                    className="flex-1 h-11 rounded border border-amber-600/20 focus:border-amber-600 focus:ring-2 focus:ring-faded-mustard/20 transition-all duration-200 bg-white text-charcoal-gray placeholder:text-charcoal-gray/40"
                   />
                   <Button
                     type="submit"
                     size="icon"
                     disabled={isLoading || !inputMessage.trim()}
-                    className="h-11 w-11 bg-gradient-to-r from-blue-700 to-blue-600 hover:shadow-lg hover:shadow-blue-600/50 transition-all duration-250 rounded text-faded-mustard border border-faded-mustard/30"
+                    className="h-11 w-11 bg-gradient-to-r from-amber-700 to-amber-600 hover:shadow-lg hover:shadow-amber-600/50 transition-all duration-250 rounded text-faded-mustard border border-faded-mustard/30"
                   >
                     <Send className="w-5 h-5" strokeWidth={2.5} />
                   </Button>
@@ -337,7 +337,7 @@ const ChatBot = () => {
                     variant="ghost"
                     size="sm"
                     onClick={handleNewChat}
-                    className="text-xs text-charcoal-gray/60 hover:text-blue-600 transition-colors duration-200 rounded font-normal"
+                    className="text-xs text-charcoal-gray/60 hover:text-amber-600 transition-colors duration-200 rounded font-normal"
                   >
                     Start New Chat
                   </Button>
