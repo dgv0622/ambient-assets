@@ -216,10 +216,10 @@ const ChatBot = () => {
 
           {/* User Info Form */}
           {showUserForm && (
-            <div className="flex-1 p-8 flex flex-col justify-center bg-gradient-to-br from-cream-white to-faded-mustard/10">
+            <div className="flex-1 p-8 flex flex-col justify-center bg-gradient-to-br from-cream-white to-blue-50">
               <div className="text-center mb-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-burnt-umber to-dusty-red rounded mb-4 shadow-soft">
-                  <MessageCircle className="w-8 h-8 text-cream-white" strokeWidth={2.5} />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-700 to-blue-600 rounded mb-4 shadow-soft">
+                  <MessageCircle className="w-8 h-8 text-faded-mustard" strokeWidth={2.5} />
                 </div>
                 <h4 className="text-2xl font-serif mb-2 text-charcoal-gray">
                   Welcome!
@@ -238,7 +238,7 @@ const ChatBot = () => {
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
                     required
-                    className="mt-2 h-11 rounded border border-burnt-umber/20 focus:border-burnt-umber transition-all duration-200 bg-white text-charcoal-gray"
+                    className="mt-2 h-11 rounded border border-blue-600/20 focus:border-blue-600 focus:ring-2 focus:ring-faded-mustard/20 transition-all duration-200 bg-white text-charcoal-gray"
                   />
                 </div>
                 <div>
@@ -250,12 +250,12 @@ const ChatBot = () => {
                     value={userEmail}
                     onChange={(e) => setUserEmail(e.target.value)}
                     required
-                    className="mt-2 h-11 rounded border border-burnt-umber/20 focus:border-burnt-umber transition-all duration-200 bg-white text-charcoal-gray"
+                    className="mt-2 h-11 rounded border border-blue-600/20 focus:border-blue-600 focus:ring-2 focus:ring-faded-mustard/20 transition-all duration-200 bg-white text-charcoal-gray"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full h-11 bg-gradient-to-r from-burnt-umber via-dusty-red to-burnt-umber hover:shadow-lg hover:shadow-burnt-umber/30 transition-all duration-250 rounded font-medium text-cream-white"
+                  className="w-full h-11 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 hover:shadow-lg hover:shadow-blue-600/50 transition-all duration-250 rounded font-medium text-faded-mustard border border-faded-mustard/30"
                   disabled={isLoading}
                 >
                   {isLoading ? (
