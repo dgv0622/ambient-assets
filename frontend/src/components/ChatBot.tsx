@@ -186,9 +186,9 @@ const ChatBot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-20 right-8 z-50 w-[420px] h-[650px] bg-cream-white rounded shadow-card flex flex-col overflow-hidden border border-burnt-umber/10">
+        <div className="fixed bottom-20 right-8 z-50 w-[420px] h-[650px] bg-cream-white rounded shadow-card flex flex-col overflow-hidden border border-blue-600/30">
           {/* Header */}
-          <div className="bg-gradient-to-r from-burnt-umber via-dusty-red to-burnt-umber text-cream-white p-6 flex items-center justify-between relative overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-cream-white p-6 flex items-center justify-between relative overflow-hidden">
             {/* Subtle texture */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 left-0 w-32 h-32 bg-faded-mustard rounded-full -translate-x-1/2 -translate-y-1/2"></div>
@@ -196,11 +196,11 @@ const ChatBot = () => {
             </div>
             
             <div className="flex items-center gap-4 relative z-10">
-              <div className="bg-faded-mustard/30 backdrop-blur-sm p-2.5 rounded">
-                <MessageCircle className="w-6 h-6" strokeWidth={2.5} />
+              <div className="bg-faded-mustard/40 backdrop-blur-sm p-2.5 rounded">
+                <MessageCircle className="w-6 h-6 text-faded-mustard" strokeWidth={2.5} />
               </div>
               <div>
-                <h3 className="font-serif font-bold text-lg tracking-wide">BBQ Catering Chat</h3>
+                <h3 className="font-serif font-bold text-lg tracking-wide text-faded-mustard">BBQ Catering Chat</h3>
                 <p className="text-xs text-cream-white/90 font-light">Real help, real quick 🍖</p>
               </div>
             </div>
@@ -208,7 +208,7 @@ const ChatBot = () => {
               variant="ghost"
               size="icon"
               onClick={toggleChat}
-              className="text-cream-white hover:bg-faded-mustard/20 rounded relative z-10 transition-all duration-200"
+              className="text-faded-mustard hover:bg-faded-mustard/20 rounded relative z-10 transition-all duration-200"
             >
               <X className="w-5 h-5" strokeWidth={2.5} />
             </Button>
