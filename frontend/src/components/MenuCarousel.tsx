@@ -34,7 +34,6 @@ const menuItems = [
 const MenuCarousel = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [activeIndex, setActiveIndex] = useState(0);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   // Auto-rotate menu items at the same speed as testimonials (4 seconds)
   useEffect(() => {
