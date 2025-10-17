@@ -29,12 +29,15 @@ const Navigation = () => {
       navigate('/packages');
       setIsMobileMenuOpen(false);
     } else {
+      // Map gallery to menu section
+      const sectionId = item === 'gallery' ? 'menu' : item;
+      
       // If not on home page, navigate to home first
       if (window.location.pathname !== '/') {
         navigate('/');
-        setTimeout(() => scrollToSection(item), 100);
+        setTimeout(() => scrollToSection(sectionId), 100);
       } else {
-        scrollToSection(item);
+        scrollToSection(sectionId);
       }
     }
   };
