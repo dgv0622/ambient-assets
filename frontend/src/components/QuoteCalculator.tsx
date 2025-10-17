@@ -167,8 +167,8 @@ const QuoteCalculator = () => {
                 <button
                   key={level.value}
                   onClick={() => setFormData({ ...formData, serviceLevel: level.value })}
-                  className={`p-6 border-2 rounded-lg transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-card ${
-                    formData.serviceLevel === level.value ? 'border-accent bg-black/40' : 'border-border/20 bg-black/20'
+                  className={`p-6 border-2 rounded-lg transition-all duration-300 hover:border-faded-mustard hover:-translate-y-1 hover:shadow-card ${
+                    formData.serviceLevel === level.value ? 'border-faded-mustard bg-gradient-to-br from-amber-700/30 to-amber-600/30' : 'border-border/20 bg-amber-700/10'
                   }`}
                 >
                   <div className="font-medium text-foreground mb-2">{level.title}</div>
