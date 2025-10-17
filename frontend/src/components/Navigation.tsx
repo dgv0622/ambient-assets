@@ -50,11 +50,6 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <img 
-              src="https://i.imgur.com/JKX6vYH.png" 
-              alt="Smokehouse Miami" 
-              className="w-12 h-12 object-contain drop-shadow-glow"
-            />
             <div className="text-foreground text-xl font-light tracking-[0.2em] uppercase">
               Smokehouse <span className="text-accent font-normal">Miami</span>
             </div>
