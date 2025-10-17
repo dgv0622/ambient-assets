@@ -165,15 +165,15 @@ const ChatBot = () => {
         >
           <div className="relative">
             {/* Pulsing background effect */}
-            <div className="absolute inset-0 bg-dusty-red rounded-full animate-ping opacity-75"></div>
+            <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-75"></div>
             
             {/* Main button */}
-            <div className="relative bg-gradient-to-br from-dusty-red via-burnt-umber to-dusty-red text-cream-white rounded-full p-5 shadow-2xl hover:shadow-dusty-red/60 transition-all duration-300 hover:scale-110 border-2 border-faded-mustard/30">
+            <div className="relative bg-gradient-to-br from-blue-700 via-blue-600 to-blue-700 text-faded-mustard rounded-full p-5 shadow-2xl hover:shadow-blue-600/60 transition-all duration-300 hover:scale-110 border-2 border-faded-mustard/30">
               <MessageCircle className="w-8 h-8" strokeWidth={2.5} />
             </div>
             
             {/* Glow effect */}
-            <div className="absolute inset-0 rounded-full bg-dusty-red/40 blur-2xl group-hover:bg-dusty-red/60 transition-all duration-300"></div>
+            <div className="absolute inset-0 rounded-full bg-blue-600/40 blur-2xl group-hover:bg-blue-600/60 transition-all duration-300"></div>
           </div>
           
           {/* Tooltip */}
