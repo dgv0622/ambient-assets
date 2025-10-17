@@ -80,16 +80,6 @@ const Hero = () => {
           >
             Plan Your Feast
           </Button>
-          <p className="text-cream-white/60 text-sm mt-4 font-light">
-            Smoked Slow. Served Right.
-          </p>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-cream-white/30 flex items-start justify-center p-2">
-          <div className="w-1.5 h-2 bg-cream-white/50 rounded-full" />
         </div>
       </div>
     </section>
