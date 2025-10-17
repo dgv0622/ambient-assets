@@ -66,84 +66,70 @@ const MenuCarousel = () => {
           </h2>
         </div>
 
-        {/* Carousel */}
-        <div className="relative max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6">
-            {menuItems.map((item, index) => {
-              const isActive = index === activeIndex;
-              const isHovered = index === hoveredIndex;
-              const offset = index - activeIndex;
-              
-              return (
-                <div
-                  key={item.name}
-                  className={`relative transition-all duration-500 ${
-                    isActive ? 'md:col-span-3' : 'md:col-span-1'
-                  }`}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  <div className={`bg-white rounded shadow-soft overflow-hidden border border-burnt-umber/10 transition-all duration-300 ${
-                    isHovered ? 'shadow-card scale-105' : ''
-                  }`}>
-                    {/* Image placeholder */}
-                    <div className={`bg-gradient-to-br from-burnt-umber/30 to-charcoal-gray/20 transition-all duration-500 ${
-                      isActive ? 'h-72' : 'h-48'
-                    } flex items-center justify-center`}>
-                      <div className="text-cream-white/30 text-6xl font-serif">{item.name[0]}</div>
-                    </div>
+        {/* Single Item Display - Similar to Testimonials */}
+        <div className="relative max-w-3xl mx-auto min-h-[500px] flex items-center justify-center">
+          {menuItems.map((item, index) => (
+            <div
+              key={item.name}
+              className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-700 ${
+                index === activeIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <div className="w-full max-w-2xl">
+                <div className="bg-white rounded-lg shadow-card overflow-hidden border border-burnt-umber/10">
+                  {/* Image placeholder */}
+                  <div className="bg-gradient-to-br from-burnt-umber/30 to-charcoal-gray/20 h-80 flex items-center justify-center">
+                    <div className="text-cream-white/30 text-8xl font-serif">{item.name[0]}</div>
+                  </div>
 
-                    {/* Content */}
-                    <div className="p-6">
-                      <h3 className="text-2xl font-serif text-charcoal-gray mb-2">{item.name}</h3>
-                      <p className="text-burnt-umber text-sm font-medium mb-3">{item.description}</p>
-                      
-                      {(isActive || isHovered) && (
-                        <p className="text-charcoal-gray/70 text-sm leading-relaxed animate-in fade-in duration-300">
-                          {item.details}
-                        </p>
-                      )}
-                    </div>
+                  {/* Content */}
+                  <div className="p-8 text-center">
+                    <h3 className="text-3xl md:text-4xl font-serif text-charcoal-gray mb-3">{item.name}</h3>
+                    <p className="text-burnt-umber text-lg font-medium mb-4">{item.description}</p>
+                    <p className="text-charcoal-gray/70 text-base leading-relaxed">
+                      {item.details}
+                    </p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            </div>
+          ))}
+        </div>
 
-          {/* Navigation */}
-          <div className="flex justify-center gap-4 mt-8">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={prev}
-              className="rounded-full border-burnt-umber/30 hover:bg-burnt-umber/10"
-            >
-              <ChevronLeft className="w-5 h-5 text-burnt-umber" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={next}
-              className="rounded-full border-burnt-umber/30 hover:bg-burnt-umber/10"
-            >
-              <ChevronRight className="w-5 h-5 text-burnt-umber" />
-            </Button>
-          </div>
+        {/* Navigation */}
+        <div className="flex justify-center gap-4 mt-8">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={prev}
+            className="rounded-full border-burnt-umber/30 hover:bg-burnt-umber/10"
+          >
+            <ChevronLeft className="w-5 h-5 text-burnt-umber" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={next}
+            className="rounded-full border-burnt-umber/30 hover:bg-burnt-umber/10"
+          >
+            <ChevronRight className="w-5 h-5 text-burnt-umber" />
+          </Button>
+        </div>
 
-          {/* Dots */}
-          <div className="flex justify-center gap-2 mt-6">
-            {menuItems.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === activeIndex 
-                    ? 'bg-burnt-umber w-8' 
-                    : 'bg-burnt-umber/30 hover:bg-burnt-umber/50'
-                }`}
-              />
-            ))}
-          </div>
+        {/* Dots */}
+        <div className="flex justify-center gap-2 mt-6">
+          {menuItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === activeIndex 
+                  ? 'bg-burnt-umber w-8' 
+                  : 'bg-burnt-umber/30 hover:bg-burnt-umber/50'
+              }`}
+              aria-label={`View ${menuItems[index].name}`}
+            />
+          ))}
         </div>
       </div>
     </section>
