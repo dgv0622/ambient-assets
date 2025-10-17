@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -19,6 +21,21 @@ const Navigation = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMobileMenuOpen(false);
+    }
+  };
+
+  const handleNavigation = (item: string) => {
+    if (item === 'packages') {
+      navigate('/packages');
+      setIsMobileMenuOpen(false);
+    } else {
+      // If not on home page, navigate to home first
+      if (window.location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => scrollToSection(item), 100);
+      } else {
+        scrollToSection(item);
+      }
     }
   };
 
