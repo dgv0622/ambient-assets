@@ -126,8 +126,8 @@ const QuoteCalculator = () => {
                 <button
                   key={type}
                   onClick={() => setFormData({ ...formData, eventType: type })}
-                  className={`p-6 border-2 rounded-lg transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-card ${
-                    formData.eventType === type ? 'border-accent bg-black/40' : 'border-border/20 bg-black/20'
+                  className={`p-6 border-2 rounded-lg transition-all duration-300 hover:border-faded-mustard hover:-translate-y-1 hover:shadow-card ${
+                    formData.eventType === type ? 'border-faded-mustard bg-gradient-to-br from-amber-700/30 to-amber-600/30' : 'border-border/20 bg-amber-700/10'
                   }`}
                 >
                   <span className="capitalize text-foreground">{type === 'corporate' ? 'Corporate Event' : type === 'private' ? 'Private Party' : type.charAt(0).toUpperCase() + type.slice(1)}</span>
