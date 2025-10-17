@@ -79,9 +79,6 @@ const Index = () => {
       {/* Footer */}
       <Footer />
 
-      {/* Sticky CTA Bar */}
-      {showStickyCTA && <StickyCTA />}
-
       {/* ChatBot */}
       <ChatBot />
     </div>
