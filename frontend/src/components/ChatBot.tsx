@@ -186,9 +186,9 @@ const ChatBot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-20 right-8 z-50 w-[420px] h-[650px] bg-cream-white rounded shadow-card flex flex-col overflow-hidden border border-blue-600/30">
+        <div className="fixed bottom-20 right-8 z-50 w-[420px] h-[650px] bg-cream-white rounded shadow-card flex flex-col overflow-hidden border border-amber-600/30">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-cream-white p-6 flex items-center justify-between relative overflow-hidden">
+          <div className="bg-gradient-to-r from-amber-700 via-amber-600 to-yellow-700 text-cream-white p-6 flex items-center justify-between relative overflow-hidden">
             {/* Subtle texture */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 left-0 w-32 h-32 bg-faded-mustard rounded-full -translate-x-1/2 -translate-y-1/2"></div>
