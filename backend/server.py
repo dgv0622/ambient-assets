@@ -177,6 +177,13 @@ async def update_n8n_config(config_data: N8nConfigUpdate):
     logger.info("Updated n8n webhook URL")
     return {"message": "Configuration updated successfully", "webhook_url": config_data.webhook_url}
 
+# Configure logging (before routes that use logger)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
 # Include the router in the main app
 app.include_router(api_router)
 
@@ -187,13 +194,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
