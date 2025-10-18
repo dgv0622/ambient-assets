@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const testimonials = [
@@ -106,4 +106,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default memo(Testimonials);

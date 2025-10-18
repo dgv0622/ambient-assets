@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, memo } from 'react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -86,4 +86,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default memo(Hero);

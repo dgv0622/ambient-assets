@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const OurStory = () => {
@@ -96,4 +97,4 @@ const OurStory = () => {
   );
 };
 
-export default OurStory;
+export default memo(OurStory);

@@ -1,15 +1,24 @@
-import { useEffect, useState } from 'react';
+import { lazy, Suspense } from 'react';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import Navigation from '@/components/Navigation';
-import Hero from '@/components/Hero';
-import OurStory from '@/components/OurStory';
 import SmokeDivider from '@/components/SmokeDivider';
-import MenuCarousel from '@/components/MenuCarousel';
-import OurValues from '@/components/OurValues';
-import Testimonials from '@/components/Testimonials';
 import QuoteCalculator from '@/components/QuoteCalculator';
 import Footer from '@/components/Footer';
-import ChatBot from '@/components/ChatBot';
+
+// Lazy load below-the-fold components for better initial load performance
+const Hero = lazy(() => import('@/components/Hero'));
+const OurStory = lazy(() => import('@/components/OurStory'));
+const MenuCarousel = lazy(() => import('@/components/MenuCarousel'));
+const OurValues = lazy(() => import('@/components/OurValues'));
+const Testimonials = lazy(() => import('@/components/Testimonials'));
+const ChatBot = lazy(() => import('@/components/ChatBot'));
+
+// Lightweight loading skeleton for lazy components
+const ComponentLoader = () => (
+  <div className="min-h-[400px] flex items-center justify-center bg-cream-white/50 animate-pulse">
+    <div className="w-16 h-16 border-4 border-burnt-umber/20 border-t-burnt-umber rounded-full animate-spin"></div>
+  </div>
+);
 
 const Index = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -53,34 +62,46 @@ const Index = () => {
       <SmokeDivider />
 
       {/* 2. Testimonials - Stories from the Table - SECOND */}
-      <Testimonials />
+      <Suspense fallback={<ComponentLoader />}>
+        <Testimonials />
+      </Suspense>
 
       {/* Smoke Line Divider */}
       <SmokeDivider />
 
       {/* 3. Menu Carousel - THIRD */}
-      <MenuCarousel />
+      <Suspense fallback={<ComponentLoader />}>
+        <MenuCarousel />
+      </Suspense>
 
       {/* Smoke Line Divider */}
       <SmokeDivider />
 
       {/* 4. Our Values Section - FOURTH */}
-      <OurValues />
+      <Suspense fallback={<ComponentLoader />}>
+        <OurValues />
+      </Suspense>
 
       {/* Smoke Line Divider */}
       <SmokeDivider />
 
       {/* 5. Our Story Section - LAST */}
-      <OurStory />
+      <Suspense fallback={<ComponentLoader />}>
+        <OurStory />
+      </Suspense>
 
       {/* Hero Section - Moved to bottom as visual closer */}
-      <Hero />
+      <Suspense fallback={<ComponentLoader />}>
+        <Hero />
+      </Suspense>
 
       {/* Footer */}
       <Footer />
 
       {/* ChatBot */}
-      <ChatBot />
+      <Suspense fallback={null}>
+        <ChatBot />
+      </Suspense>
     </div>
   );
 };
