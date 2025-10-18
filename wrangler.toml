@@ -1,0 +1,29 @@
+# Cloudflare Pages configuration for frontend only
+# Note: This is for Cloudflare Pages, not Workers
+
+name = "smokehouse-miami-bbq"
+compatibility_date = "2024-01-01"
+
+# Pages configuration
+[site]
+bucket = "./frontend/build"
+
+# Environment variables for production
+[env.production.vars]
+# You'll need to host the backend elsewhere and update this URL
+# REACT_APP_BACKEND_URL = "https://your-backend-url.com"
+
+# Build configuration
+[build]
+command = "cd frontend && yarn install && yarn build"
+cwd = "frontend"
+watch_dirs = ["frontend/src"]
+
+# Note: FastAPI backend cannot run on Cloudflare Workers
+# You'll need to deploy the backend to:
+# - Heroku
+# - Railway
+# - DigitalOcean
+# - AWS/Google Cloud/Azure
+# - Vercel (for Next.js API routes conversion)
+# - Or any traditional hosting platform
