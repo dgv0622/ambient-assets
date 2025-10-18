@@ -1,0 +1,13 @@
+{
+  "name": "smokehouse-miami-backend",
+  "version": "1.0.0",
+  "description": "BBQ Catering Website Backend API",
+  "scripts": {
+    "start": "uvicorn server:app --host 0.0.0.0 --port $PORT"
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
