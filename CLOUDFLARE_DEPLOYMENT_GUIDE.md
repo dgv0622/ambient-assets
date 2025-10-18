@@ -14,7 +14,7 @@
 1. **Deploy Frontend to Cloudflare Pages:**
    ```bash
    cd /app/frontend
-   yarn build
+   npm run build
    npx wrangler pages deploy build --project-name=smokehouse-miami
    ```
 
@@ -28,7 +28,7 @@
 3. **Update Frontend Environment Variable:**
    - In Cloudflare Pages dashboard, set:
    ```
-   REACT_APP_BACKEND_URL=https://your-backend-url.com
+   VITE_BACKEND_URL=https://your-backend-url.com
    ```
 
 4. **Deploy MongoDB:**
@@ -52,7 +52,7 @@ This requires **complete rewrite** of the backend:
 ### Step 1: Build Frontend
 ```bash
 cd /app/frontend
-yarn build
+npm run build
 ```
 
 ### Step 2: Deploy to Cloudflare Pages
@@ -94,7 +94,7 @@ git push heroku main
 ### Step 4: Connect Frontend to Backend
 1. Get your backend URL (e.g., `https://smokehouse-api.railway.app`)
 2. In Cloudflare Pages settings, add environment variable:
-   - Key: `REACT_APP_BACKEND_URL`
+   - Key: `VITE_BACKEND_URL`
    - Value: Your backend URL
 3. Redeploy frontend
 

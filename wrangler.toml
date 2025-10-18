@@ -11,11 +11,11 @@ bucket = "./frontend/build"
 # Environment variables for production
 [env.production.vars]
 # You'll need to host the backend elsewhere and update this URL
-# REACT_APP_BACKEND_URL = "https://your-backend-url.com"
+# VITE_BACKEND_URL = "https://your-backend-url.com"
 
 # Build configuration
 [build]
-command = "cd frontend && yarn install && yarn build"
+command = "cd frontend && npm ci && npm run build"
 cwd = "frontend"
 watch_dirs = ["frontend/src"]
 
