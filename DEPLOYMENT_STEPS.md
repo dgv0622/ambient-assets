@@ -65,7 +65,7 @@ CORS_ORIGINS=https://your-cloudflare-pages-url.pages.dev
 ### Step 1: Build Frontend (Already Done)
 ```bash
 cd /app/frontend
-yarn build
+npm run build
 ```
 
 ### Step 2: Deploy to Cloudflare Pages
@@ -86,7 +86,7 @@ wrangler pages deploy build --project-name=smokehouse-miami
 After deployment, in Cloudflare Pages dashboard:
 1. Go to Settings → Environment Variables
 2. Add:
-   - **Variable name**: `REACT_APP_BACKEND_URL`
+   - **Variable name**: `VITE_BACKEND_URL`
    - **Value**: `https://your-railway-backend-url.railway.app`
 3. Redeploy
 
@@ -143,7 +143,7 @@ git push heroku main
 - Make sure `CORS_ORIGINS` in backend includes your Cloudflare Pages URL
 
 **API calls failing?**
-- Check `REACT_APP_BACKEND_URL` in Cloudflare Pages environment variables
+- Check `VITE_BACKEND_URL` in Cloudflare Pages environment variables
 - Ensure backend URL ends without trailing slash
 
 **Database connection failed?**

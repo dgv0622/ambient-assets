@@ -57,7 +57,7 @@
 - [ ] Install Wrangler: `npm install -g wrangler`
 - [ ] Login to Cloudflare: `wrangler login`
 - [ ] Navigate to frontend: `cd /app/frontend`
-- [ ] Build: `yarn build` (already done)
+- [ ] Build: `npm run build` (already done)
 - [ ] Deploy: `wrangler pages deploy build --project-name=smokehouse-miami`
 - [ ] Get Cloudflare Pages URL (will be like: smokehouse-miami.pages.dev)
 
@@ -67,7 +67,7 @@
 - [ ] Go to Cloudflare Pages dashboard
 - [ ] Navigate to: Settings → Environment Variables
 - [ ] Add variable:
-  - Name: `REACT_APP_BACKEND_URL`
+  - Name: `VITE_BACKEND_URL`
   - Value: Your backend URL (no trailing slash)
 - [ ] For Production AND Preview environments
 - [ ] Save and trigger new deployment
@@ -96,7 +96,7 @@
 ## Troubleshooting
 If things don't work:
 - [ ] Check browser console for errors (F12)
-- [ ] Verify REACT_APP_BACKEND_URL is correct (no trailing slash)
+- [ ] Verify VITE_BACKEND_URL is correct (no trailing slash)
 - [ ] Check backend logs in hosting dashboard
 - [ ] Verify MongoDB connection string is correct
 - [ ] Ensure CORS_ORIGINS includes your frontend URL
