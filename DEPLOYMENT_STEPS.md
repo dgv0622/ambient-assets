@@ -78,7 +78,7 @@ wrangler login
 
 # Deploy
 cd /app/frontend
-wrangler pages deploy build --project-name=smokehouse-miami
+wrangler pages deploy --project-name=smokehouse-miami
 ```
 
 ### Step 3: Set Frontend Environment Variable in Cloudflare

@@ -1,0 +1,12 @@
+{
+  "name": "smokehouse-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "devDependencies": {
+    "wrangler": "^4.43.0"
+  },
+  "scripts": {
+    "pages:login": "wrangler login",
+    "pages:deploy": "wrangler pages deploy"
+  }
+}

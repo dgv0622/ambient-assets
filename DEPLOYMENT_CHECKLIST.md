@@ -58,7 +58,7 @@
 - [ ] Login to Cloudflare: `wrangler login`
 - [ ] Navigate to frontend: `cd /app/frontend`
 - [ ] Build: `npm run build` (already done)
-- [ ] Deploy: `wrangler pages deploy build --project-name=smokehouse-miami`
+- [ ] Deploy: `wrangler pages deploy --project-name=smokehouse-miami`
 - [ ] Get Cloudflare Pages URL (will be like: smokehouse-miami.pages.dev)
 
 **Frontend URL obtained:** ___________________________________

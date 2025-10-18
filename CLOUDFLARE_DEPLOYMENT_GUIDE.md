@@ -15,7 +15,7 @@
    ```bash
    cd /app/frontend
    npm run build
-   npx wrangler pages deploy build --project-name=smokehouse-miami
+   npx wrangler pages deploy --project-name=smokehouse-miami
    ```
 
 2. **Deploy Backend to a Python-compatible host:**
@@ -64,7 +64,7 @@ npm install -g wrangler
 wrangler login
 
 # Deploy
-wrangler pages deploy build --project-name=smokehouse-miami
+wrangler pages deploy --project-name=smokehouse-miami
 ```
 
 ### Step 3: Deploy Backend Separately

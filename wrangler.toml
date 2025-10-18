@@ -4,9 +4,9 @@
 name = "smokehouse-miami-bbq"
 compatibility_date = "2024-01-01"
 
-# Pages configuration
-[site]
-bucket = "./frontend/build"
+# Cloudflare Pages output directory so `wrangler pages deploy` works without args
+pages_build_output_dir = "./frontend/build"
+
 
 # Environment variables for production
 [env.production.vars]
@@ -15,9 +15,8 @@ bucket = "./frontend/build"
 
 # Build configuration
 [build]
-command = "cd frontend && npm ci && npm run build"
-cwd = "frontend"
-watch_dirs = ["frontend/src"]
+# Optional: local build command (run manually before deploy)
+command = "npm run build"
 
 # Note: FastAPI backend cannot run on Cloudflare Workers
 # You'll need to deploy the backend to:
