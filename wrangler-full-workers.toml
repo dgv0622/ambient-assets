@@ -1,0 +1,41 @@
+# Full Cloudflare Workers deployment configuration
+# WARNING: This requires significant refactoring of your application
+
+name = "smokehouse-miami-bbq-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Workers configuration
+workers_dev = true
+route = ""
+zone_id = ""
+
+# KV Namespaces for storage (replaces MongoDB)
+kv_namespaces = [
+  { binding = "CHAT_SESSIONS", id = "your-kv-namespace-id" },
+  { binding = "CHAT_MESSAGES", id = "your-kv-namespace-id" },
+  { binding = "CHAT_CONFIG", id = "your-kv-namespace-id" }
+]
+
+# D1 Database (alternative to MongoDB)
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "smokehouse-db"
+# database_id = "your-d1-database-id"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "production"
+
+# Build configuration
+[build]
+command = "npm run build"
+
+# IMPORTANT CHANGES NEEDED:
+# 1. Convert FastAPI Python backend to JavaScript/TypeScript Workers
+# 2. Replace MongoDB with Cloudflare KV or D1
+# 3. Rewrite all Python endpoints as Worker routes
+# 4. Update frontend to use Worker URLs
+# 5. Remove n8n webhook (or adapt for edge compatibility)
+
+# This is a MAJOR refactoring project - not recommended unless necessary
